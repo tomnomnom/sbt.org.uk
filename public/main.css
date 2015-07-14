@@ -44,8 +44,7 @@ body {
 
 .company .tagline {
   font-size: 0.6em;
-  text-align: justify;
-  text-justify: trim;
+  text-align: center;
   margin-top: -0.5em;
 }
 
