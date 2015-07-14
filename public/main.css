@@ -7,7 +7,6 @@ html {
 
 body {
   font-weight: 400;
-  font-size: 24px;
   font-family: 'EB Garamond', serif;
   vertical-align: baseline;
   -webkit-font-smoothing: antialiased;
@@ -15,6 +14,7 @@ body {
 }
 
 .card {
+  font-size: 32px;
   width: 23em;
   font-variant: small-caps;
   text-shadow: 1px 1px 1px #FFFFFF;
@@ -27,6 +27,7 @@ body {
   padding-top: 2em;
   position: relative;
   border-radius: 2px;
+  background-image: url('paper.png');
 }
 
 .phone {
@@ -36,11 +37,15 @@ body {
 
 .company {
   float: right;
+  font-size: 0.9em;
   margin-bottom: 2em;
 }
 
 .company .tagline {
   font-size: 0.6em;
+  text-align: justify;
+  text-justify: trim;
+  margin-top: -0.5em;
 }
 
 .name {
