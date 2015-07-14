@@ -33,13 +33,13 @@ body {
 
 .phone {
   float: left;
-  margin-bottom: 2em;
+  margin-bottom: 2.2em;
 }
 
 .company {
   float: right;
   font-size: 0.9em;
-  margin-bottom: 2em;
+  margin-bottom: 2.2em;
 }
 
 .company .tagline {
