@@ -1,0 +1,15 @@
+html {
+  padding: 0;
+  margin: 0;
+  background-color: #EAEAEA;
+  color: #232323;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
