@@ -8,8 +8,29 @@
         <meta name="theme-color" content="#119C11">
 
         <link rel="stylesheet" type="text/css" href="main.css"/>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=EB+Garamond">
     </head>
 
     <body>
+        <div class="card">
+            <div class="phone">
+                212 555 6342
+            </div>
+            <div class="company">
+                <div class="logo">Pierce &amp; Pierce</div>
+                <div class="tagline">Mergers and Aquisitions</div>
+            </div>
+            <div class="name">
+                Patrick BATEMAN
+            </div>
+            <div class="title">
+                Vice President
+            </div>
+            <div class="address">
+                358 Exchange Place New York, N.Y.
+                10099 fax 212 555 6390
+                telex io 4534
+            </div>
+        </div>
     </body>
 </html>
