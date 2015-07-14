@@ -39,12 +39,13 @@ body {
 .company {
   float: right;
   font-size: 0.9em;
+  text-align: right;
   margin-bottom: 2.2em;
 }
 
 .company .tagline {
   font-size: 0.6em;
-  text-align: center;
+  text-align: right;
   margin-top: -0.5em;
 }
 
@@ -68,8 +69,39 @@ body {
   text-align: center;
 }
 
+.edit {
+  margin-top: 3em;
+  font-size: 20px;
+}
+
+.edit .tagline {
+  margin-top: 0.5em;
+}
+
+.edit .title {
+  margin-bottom: 2em;
+}
+
+.edit input {
+  width: 15em;
+  text-align: center;
+  border: 1px solid #ABABAB;
+  border-radius: 2px;
+  background-color: #EFEFEF;
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.edit .address input {
+  width: 100%;
+}
+
 @media all and (max-width: 600px) {
   .card {
     font-size: 13px;
+  }
+  .edit input {
+    width: 10em;
   }
 }
