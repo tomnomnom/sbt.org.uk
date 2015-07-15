@@ -7,6 +7,8 @@ $name    = maybe($_GET, "name",    "Patrick BATEMAN");
 $title   = maybe($_GET, "title",   "Vice President");
 $address = maybe($_GET, "address", "358 Exchange Place New York, N.Y. 10099 fax 212 555 6390 telex 10 4534");
 
+$shareurl = isset($_SERVER['QUERY_STRING'])? "http://sbt.org.uk/?".$_SERVER['QUERY_STRING'] : "";
+
 function maybe($get, $key, $default){
     if (isset($get[$key])){
         return $get[$key];
@@ -45,24 +47,31 @@ function e($str){
             <div class="address"><?=e($address);?></div>
         </div>
 
-        <div class="card edit" id="input">
-            <div class="phone">
-                <input type="text" name="phone" value="<?=e($phone);?>">
+        <form action="/" method="GET">
+            <div class="card edit" id="input">
+                <div class="phone">
+                    <input type="text" name="phone" value="<?=e($phone);?>">
+                </div>
+                <div class="company">
+                    <div class="logo"><input type="text" name="logo" value="<?=e($logo);?>"></div>
+                    <div class="tagline"><input type="text" name="tagline" value="<?=e($tagline);?>"></div>
+                </div>
+                <div class="name">
+                    <input type="text" name="name" value="<?=e($name);?>">
+                </div>
+                <div class="title">
+                    <input type="text" name="title" value="<?=e($title);?>">
+                </div>
+                <div class="address">
+                    <input type="text" name="address" value="<?=e($address);?>">
+                </div>
             </div>
-            <div class="company">
-                <div class="logo"><input type="text" name="logo" value="<?=e($logo);?>"></div>
-                <div class="tagline"><input type="text" name="tagline" value="<?=e($tagline);?>"></div>
+
+            <div class="save">
+                <input type="submit" value="Save/Share">
+                <input type="text" id="shareurl" value="<?=e($shareurl);?>">
             </div>
-            <div class="name">
-                <input type="text" name="name" value="<?=e($name);?>">
-            </div>
-            <div class="title">
-                <input type="text" name="title" value="<?=e($title);?>">
-            </div>
-            <div class="address">
-                <input type="text" name="address" value="<?=e($address);?>">
-            </div>
-        </div>
+        </form>
 
         <div class="footer">
             <a href="https://twitter.com/TomNomNom">@TomNomNom</a>
@@ -78,6 +87,9 @@ function e($str){
                     memo[e.target.name] = out.getElementsByClassName(e.target.name)[0];
                 }
                 memo[e.target.name].innerHTML = e.target.value || "&nbsp;";
+            };
+            document.getElementById("shareurl").onfocus = function() {
+                this.select();
             };
         };
     </script>

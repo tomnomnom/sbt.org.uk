@@ -97,6 +97,11 @@ body {
   width: 100%;
 }
 
+.save {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
 @media all and (max-width: 600px) {
   .card {
     font-size: 13px;
