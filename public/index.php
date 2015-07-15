@@ -1,3 +1,23 @@
+<?php
+// I'm into, uh, well, murders and executions, mostly.
+$phone   = maybe($_GET, "phone",   "212 555 6342");
+$logo    = maybe($_GET, "logo",    "Pierce & Pierce");
+$tagline = maybe($_GET, "tagline", "Mergers and Aquisitions");
+$name    = maybe($_GET, "name",    "Patrick BATEMAN");
+$title   = maybe($_GET, "title",   "Vice President");
+$address = maybe($_GET, "address", "358 Exchange Place New York, N.Y. 10099 fax 212 555 6390 telex 10 4534");
+
+function maybe($get, $key, $default){
+    if (isset($get[$key])){
+        return $get[$key];
+    }
+    return $default;
+}
+
+function e($str){
+    return htmlentities($str, ENT_QUOTES, "UTF-8");
+}
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -14,42 +34,35 @@
     <body>
         <div class="card" id="output">
             <div class="phone">
-                212 555 6342
+                <?=e($phone);?>
             </div>
             <div class="company">
-                <div class="logo">Pierce &amp; Pierce</div>
-                <div class="tagline">Mergers and Aquisitions</div>
+                <div class="logo"><?=e($logo);?></div>
+                <div class="tagline"><?=e($tagline);?></div>
             </div>
-            <div class="name">
-                Patrick BATEMAN
-            </div>
-            <div class="title">
-                Vice President
-            </div>
-            <div class="address">
-                358 Exchange Place New York, N.Y.
-                10099 fax 212 555 6390
-                telex 10 4534
-            </div>
+            <div class="name"><?=e($name);?></div>
+            <div class="title"><?=e($title);?></div>
+            <div class="address"><?=e($address);?></div>
         </div>
 
         <div class="card edit" id="input">
             <div class="phone">
-                <input type="text" name="phone" value="212 555 6342">
+                <input type="text" name="phone" value="<?=e($phone);?>">
             </div>
             <div class="company">
-                <div class="logo"><input type="text" name="logo" value="Pierce &amp; Pierce"></div>
-                <div class="tagline"><input type="text" name="tagline" value="Mergers and Aquisitions"></div>
+                <div class="logo"><input type="text" name="logo" value="<?=e($logo);?>"></div>
+                <div class="tagline"><input type="text" name="tagline" value="<?=e($tagline);?>"></div>
             </div>
             <div class="name">
-                <input type="text" name="name" value="Patrick BATEMAN">
+                <input type="text" name="name" value="<?=e($name);?>">
             </div>
             <div class="title">
-                <input type="text" name="title" value="Vice President">
+                <input type="text" name="title" value="<?=e($title);?>">
             </div>
             <div class="address">
-                <input type="text" name="address" value="358 Exchange Place New York, N.Y. 10099 fax 212 555 6390 telex 10 4534">
+                <input type="text" name="address" value="<?=e($address);?>">
             </div>
+            <input type="submit" value="Save">
         </div>
 
         <div class="footer">
