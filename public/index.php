@@ -7,7 +7,7 @@ $name    = maybe($_GET, "name",    "Patrick BATEMAN");
 $title   = maybe($_GET, "title",   "Vice President");
 $address = maybe($_GET, "address", "358 Exchange Place New York, N.Y. 10099 fax 212 555 6390 telex 10 4534");
 
-$shareurl = isset($_SERVER['QUERY_STRING'])? "http://sbt.org.uk/?".$_SERVER['QUERY_STRING'] : "";
+$shareurl = ($_SERVER['QUERY_STRING'] == "")? "" : "http://sbt.org.uk/?".$_SERVER['QUERY_STRING'];
 
 function maybe($get, $key, $default){
     if (isset($get[$key])){
