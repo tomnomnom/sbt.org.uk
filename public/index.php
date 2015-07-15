@@ -62,7 +62,6 @@ function e($str){
             <div class="address">
                 <input type="text" name="address" value="<?=e($address);?>">
             </div>
-            <input type="submit" value="Save">
         </div>
 
         <div class="footer">
